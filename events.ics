@@ -1,0 +1,163 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Chowdown//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:El Comal Events
+X-WR-CALDESC:Upcoming events at El Comal
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:04-independence-day-0@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:04 INDEPENDENCE DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-tequila-day-1@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:NATIONAL TEQUILA DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-fajitas-day-2@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20260819
+SUMMARY:NATIONAL FAJITAS DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:labor-day-3@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:LABOR DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:grandparents-day-4@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:GRANDPARENTS DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:independence-day-mx-5@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:INDEPENDENCE DAY (MX)
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-quesadilla-day-6@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:NATIONAL QUESADILLA DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-chimichanga-day-7@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+SUMMARY:NATIONAL CHIMICHANGA DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-vegetarian-day-8@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:NATIONAL VEGETARIAN DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-taco-day-9@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY:NATIONAL TACO DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:columbus-day-10@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:COLUMBUS DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:halloween-11@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:HALLOWEEN
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:veterans-day-12@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:VETERANS DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:thanksgiving-day-13@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:THANKSGIVING DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:christmas-eve-14@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:CHRISTMAS EVE
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:christmas-day-15@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:CHRISTMAS DAY
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:new-year-s-eve-16@elcomalmexicanrestaurants.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:NEW YEAR’S EVE
+LOCATION:11177 Lebanon Rd\, Mt. Juliet\, TN\, 37122
+URL:https://elcomalmexicanrestaurants.com/events/
+END:VEVENT
+END:VCALENDAR
