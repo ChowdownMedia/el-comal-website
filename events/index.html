@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events | El Comal Authentic Mexican Restaurant, Mt. Juliet TN</title>
+<meta name="description" content="Upcoming events and celebrations at El Comal in Mt. Juliet, TN. Book your private party, birthday, quinceanera or big group with us.">
+<!--
+  FONTS: Elegant high contrast serif + clean sans, loaded with font-display:swap, no preload.
+  To fully self host, download these exact Google Fonts and swap the link for local @font-face:
+    Heading display : "DM Serif Display" 400 (roman + italic)
+    Body sans       : "Libre Franklin" 400, 500, 600, 700
+  LOGO: the placeholder wordmark below echoes the real woodcut logo. Drop the real logo file in
+  by replacing the .logo contents with: <img src="elcomal-logo.svg" alt="El Comal" width="150" height="44">
+-->
+<style>
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/dmserif.woff2) format('woff2')}
+@font-face{font-family:'DM Serif Display';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/dmserif-italic.woff2) format('woff2')}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400 700;font-display:swap;src:url(/assets/fonts/librefranklin.woff2) format('woff2')}
+/* ============================================================
+   EL COMAL - shared design language (dark, fire-lit)
+   Palette: charred black + bone white + chile red. Fire accents.
+   ============================================================ */
+:root{
+  --bg:#150f0c;
+  --bg-2:#1e150f;
+  --bg-3:#28190f;
+  --paper:#f6f1e8;
+  --line:#3a2b21;
+  --line-lt:#e4d8c6;
+  --red:#cf2a1c;
+  --red-deep:#7b1512;
+  --red-ink:#a81d18;
+  --red-lite:#ff8a5c;
+  --ember:#ff7a2d;
+  --gold:#ffb84d;
+  --bone:#f5ede1;
+  --muted:#cbb4a2;
+  --ink:#1a1310;
+  --ink-2:#5c4a3f;
+  --white:#ffffff;
+  --serif:"DM Serif Display", "Playfair Display", Georgia, serif;
+  --sans:"Libre Franklin", system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+  --h1:clamp(2.5rem, 11.5vw, 8.5rem);
+  --h2:clamp(2rem, 5.2vw, 3.4rem);
+  --h3:clamp(1.2rem, 2.6vw, 1.55rem);
+  --gut:clamp(1.15rem, 4vw, 2rem);
+  --sec:clamp(3.5rem, 9vw, 7rem);
+  --wrap:1180px;
+  --r:3px;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 22px 48px -26px rgba(0,0,0,.7);
+  --picado:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='26'%3E%3Cpath d='M0 0h40v13a20 20 0 0 1-40 0z' fill='%23000'/%3E%3Ccircle cx='20' cy='11' r='3.4' fill='none'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--bone);
+  font-family:var(--sans);font-size:17px;line-height:1.62;font-weight:400;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0;letter-spacing:.005em}
+p{margin:0 0 1rem}
+img{max-width:100%;display:block}
+a{color:var(--red-lite);text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--red-lite);outline-offset:2px;border-radius:2px}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--red);color:#fff;padding:.7rem 1rem;border-radius:var(--r);transition:top .18s;text-decoration:none}
+.skip:focus{top:12px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--sans);font-weight:700;
+  font-size:1rem;letter-spacing:.02em;padding:.85rem 1.4rem;border-radius:var(--r);border:2px solid transparent;
+  cursor:pointer;text-decoration:none;line-height:1;transition:transform .12s ease, background .16s, color .16s, border-color .16s}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--red);color:#fff;border-color:var(--red)}
+.btn--primary:hover{background:#e8371f;border-color:#e8371f}
+.btn--ghost{background:transparent;color:var(--bone);border-color:var(--bone)}
+.btn--ghost:hover{background:var(--bone);color:var(--bg)}
+.btn--onDark{background:transparent;color:var(--bone);border-color:var(--bone)}
+.btn--onDark:hover{background:var(--bone);color:var(--red-deep)}
+.btn--sm{padding:.6rem 1rem;font-size:.9rem}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--bg) 84%, transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:1rem;min-height:78px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--bone);margin-right:auto}
+.logo-img{height:56px;width:auto;display:block}
+@media(min-width:900px){.logo-img{height:64px}}
+.nav{display:none;align-items:center;gap:1.6rem}
+.nav a{color:var(--bone);text-decoration:none;font-weight:600;font-size:.98rem;padding:.3rem 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--red-lite);transition:right .2s}
+.nav a:hover::after,.nav a:focus-visible::after{right:0}
+.header-cta{display:none}
+.hamb{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;
+  background:transparent;border:1px solid var(--line);border-radius:var(--r);cursor:pointer;padding:0 10px}
+.hamb span{height:2px;background:var(--bone);border-radius:2px;transition:.2s}
+.mnav{display:none;flex-direction:column;gap:.2rem;padding:.6rem var(--gut) 1.1rem;border-top:1px solid var(--line);background:var(--bg)}
+.mnav.open{display:flex}
+.mnav a{color:var(--bone);text-decoration:none;font-weight:600;padding:.75rem .2rem;border-bottom:1px solid var(--line)}
+.mnav .btn{margin-top:.7rem;justify-content:center}
+@media(min-width:900px){.nav{display:flex}.header-cta{display:inline-flex}.hamb{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background:radial-gradient(125% 95% at 50% 118%, #4a2110 0%, #29160d 30%, var(--bg) 60%, #0d0906 100%)}
+.hero .wrap{position:relative;z-index:3;padding-top:clamp(3rem,9vw,6rem);padding-bottom:clamp(3.5rem,10vw,7rem);text-align:center}
+.eyebrow{font-family:var(--sans);font-weight:700;letter-spacing:.32em;font-size:.72rem;text-transform:uppercase;
+  color:var(--gold);margin:0 0 1rem;display:inline-flex;align-items:center;gap:.7rem}
+.eyebrow .rule{width:34px;height:1px;background:var(--gold);display:inline-block}
+.brand{font-size:var(--h1);color:var(--red);letter-spacing:-.01em;margin:0 0 .2rem;line-height:.86}
+.brand .l1,.brand .l2{display:block;overflow:visible}
+.brand .l1 span,.brand .l2 span{display:block}
+.brand .l2{color:var(--bone)}
+.hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,3.4vw,1.7rem);color:var(--gold);margin:.4rem 0 1.3rem}
+.hero .lede{max-width:44ch;margin:0 auto 1.9rem;font-size:1.08rem;color:var(--muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.hero-dish{position:relative;z-index:3;max-width:340px;margin:2.4rem auto 0}
+
+/* sparks (real ember flecks, not dots) */
+.embers{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.ember{position:absolute;bottom:-18px;width:3px;height:15px;border-radius:2px 2px 1px 1px;
+  background:linear-gradient(to top, #ff4d16, #ffce6b);
+  box-shadow:0 0 6px 1px rgba(255,120,40,.85), 0 0 14px 3px rgba(255,90,20,.4);
+  opacity:0;animation:rise linear infinite}
+@keyframes rise{
+  0%{transform:translateY(0) translateX(0) scaleY(.5);opacity:0}
+  10%{opacity:1}
+  50%{transform:translateY(-40vh) translateX(calc(var(--dx,0)*.5)) scaleY(1);opacity:.95}
+  75%{opacity:.7}
+  100%{transform:translateY(-94vh) translateX(var(--dx,0)) scaleY(.35);opacity:0}
+}
+/* pulsing hearth glow */
+.hearth{position:absolute;left:0;right:0;bottom:0;height:56%;z-index:1;pointer-events:none;
+  background:radial-gradient(70% 130% at 50% 122%, rgba(255,120,40,.5), rgba(207,42,28,.24) 42%, transparent 74%);
+  animation:hearth 3.6s ease-in-out infinite}
+@keyframes hearth{0%,100%{opacity:.6;transform:scaleY(.95)}50%{opacity:1;transform:scaleY(1.06)}}
+/* slow spinning ember-ray halo */
+.halo{position:absolute;left:50%;top:clamp(3rem,14vw,9rem);transform:translate(-50%,-50%);
+  width:min(900px,132vw);aspect-ratio:1;z-index:1;pointer-events:none;border-radius:50%;
+  background:repeating-conic-gradient(from 0deg, rgba(255,90,25,.16) 0 1.4deg, transparent 1.4deg 14deg);
+  -webkit-mask:radial-gradient(closest-side, transparent 37%, #000 40%, #000 62%, transparent 67%);
+  mask:radial-gradient(closest-side, transparent 37%, #000 40%, #000 62%, transparent 67%);
+  animation:spin 52s linear infinite}
+.halo.two{width:min(640px,98vw);background:repeating-conic-gradient(from 6deg, rgba(255,140,60,.13) 0 1deg, transparent 1deg 10deg);animation-duration:74s;animation-direction:reverse}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.float{animation:bob 5.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* reveal */
+.reveal-mask span{display:block;opacity:0;transform:translateY(64px) scale(.9);filter:blur(9px);animation:flareIn 1.15s cubic-bezier(.2,.75,.2,1) forwards}
+.brand .l1 span{animation-delay:.15s}
+.brand .l2 span{animation-delay:.38s}
+@keyframes flareIn{0%{opacity:0;transform:translateY(64px) scale(.9);filter:blur(9px)}55%{filter:blur(0)}100%{opacity:1;transform:none;filter:blur(0)}}
+.brand .l1{animation:emberGlow 3.4s ease-in-out 1s infinite}
+@keyframes emberGlow{0%,100%{text-shadow:0 0 0 rgba(255,120,40,0)}50%{text-shadow:0 0 34px rgba(255,120,40,.55), 0 0 70px rgba(207,42,28,.35)}}
+.fade-seq{opacity:0;transform:translateY(14px);animation:fu .8s ease forwards}
+.d1{animation-delay:.55s}.d2{animation-delay:.7s}.d3{animation-delay:.85s}.d4{animation-delay:1s}
+@keyframes fu{to{opacity:1;transform:none}}
+.r-up{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+.r-up.in{opacity:1;transform:none}
+[data-stagger]>*{transition-delay:calc(var(--i,0)*70ms)}
+
+/* section shell */
+.section{padding-block:var(--sec)}
+.section--alt{background:var(--bg-2);border-block:1px solid var(--line)}
+.section--dark{background:var(--red-deep);color:var(--bone)}
+.section--dark h2,.section--dark h3{color:var(--bone)}
+.kicker{display:flex;align-items:center;gap:.7rem;justify-content:center;font-weight:700;letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;color:var(--gold);margin-bottom:.9rem}
+.kicker .ico{width:20px;height:20px;color:var(--red-lite)}
+.section--dark .kicker{color:#ffd0ab}.section--dark .kicker .ico{color:#ffd0ab}
+.sec-title{font-size:var(--h2);text-align:center;max-width:16ch;margin:0 auto .8rem;color:var(--bone)}
+.sec-sub{text-align:center;max-width:56ch;margin:0 auto;color:var(--muted)}
+.section--dark .sec-sub{color:#f4ddcc}
+
+/* divider */
+.divider{--h:26px;height:var(--h);color:var(--red);background:currentColor;-webkit-mask:var(--picado) repeat-x bottom/40px 100%;mask:var(--picado) repeat-x bottom/40px 100%}
+
+/* story */
+.story{display:grid;gap:clamp(1.6rem,5vw,3.4rem);align-items:center}
+.medallion{position:relative;max-width:420px;margin-inline:auto;width:100%}
+.medallion .disc{width:100%;color:var(--red-lite)}
+.medallion .inset{position:absolute;right:-4%;bottom:-6%;width:46%;aspect-ratio:1;border:5px solid var(--bg);box-shadow:var(--shadow);border-radius:50%;overflow:hidden}
+.story h2{font-size:var(--h2)}
+.story .lead-in{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.2rem;margin-bottom:.6rem}
+@media(min-width:860px){.story{grid-template-columns:.95fr 1.05fr}}
+
+/* placeholders */
+.ph{position:relative;background:repeating-linear-gradient(45deg, #241812 0 11px, #30201580 11px 22px), #241812;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ph::after{content:attr(data-note);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.66rem;letter-spacing:.08em;
+  color:#b89a82;background:rgba(10,7,5,.72);padding:.3rem .5rem;border-radius:2px;text-align:center;max-width:82%}
+.card .ph{background:repeating-linear-gradient(45deg,#efe7d9 0 11px,#e2d6c2 11px 22px)}
+.card .ph::after{color:#8a7a63;background:rgba(246,241,232,.82)}
+.section--dark .ph{background:repeating-linear-gradient(45deg,#6a1210 0 11px,#5c0f0d 11px 22px)}
+.section--dark .ph::after{color:#f0d3c6;background:rgba(50,10,8,.72)}
+
+/* cards */
+.grid-cards{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2.4rem}
+@media(min-width:620px){.grid-cards{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid-cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line-lt);border-radius:var(--r);overflow:hidden;color:var(--ink);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 54px -24px rgba(0,0,0,.7)}
+.card .media{aspect-ratio:4/3;width:100%;height:auto;object-fit:cover}
+.card .body{padding:1.1rem 1.15rem 1.3rem}
+.card h3{font-size:1.4rem;margin-bottom:.25rem;color:var(--ink)}
+.card .price{color:var(--red-ink);font-weight:700;font-family:var(--sans);font-size:1rem}
+.card .body p{color:var(--ink-2);font-size:.95rem;margin:.4rem 0 0}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem}
+
+/* gallery + lightbox */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-top:2.2rem}
+@media(min-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:960px){.gallery{grid-template-columns:repeat(4,1fr);gap:.9rem}}
+.gcell{aspect-ratio:1;border:0;padding:0;cursor:pointer;border-radius:var(--r);overflow:hidden;background:none;position:relative}
+.gcell .ph{position:absolute;inset:0}
+.gcell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gcell::before{content:"";position:absolute;inset:0;z-index:2;background:var(--red);opacity:0;transition:opacity .2s;mix-blend-mode:screen}
+.gcell:hover::before,.gcell:focus-visible::before{opacity:.22}
+.lightbox{position:fixed;inset:0;z-index:300;display:none;place-items:center;background:rgba(8,5,4,.94);padding:clamp(1rem,4vw,3rem)}
+.lightbox.open{display:grid}
+.lb-stage{position:relative;width:min(880px,92vw);max-height:82vh;aspect-ratio:4/3}
+.lb-stage .ph{position:absolute;inset:0;border-radius:var(--r)}
+.lb-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:var(--r)}
+.lb-cap{color:var(--bone);text-align:center;margin-top:.9rem;font-family:ui-monospace,Menlo,monospace;font-size:.8rem;opacity:.85}
+.lb-btn{position:fixed;top:1rem;right:1rem;width:48px;height:48px;border-radius:50%;border:1px solid rgba(245,237,225,.4);background:rgba(20,14,12,.6);color:var(--bone);cursor:pointer;display:grid;place-items:center}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(245,237,225,.4);background:rgba(20,14,12,.6);color:var(--bone);cursor:pointer;display:grid;place-items:center}
+.lb-prev{left:clamp(.6rem,3vw,2rem)}.lb-next{right:clamp(.6rem,3vw,2rem)}
+.lb-btn:hover,.lb-nav:hover{background:var(--red)}
+
+/* reviews */
+.reviews{margin-top:2.2rem;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.review{scroll-snap-align:start;flex:0 0 min(84%,340px);background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem 1.3rem;box-shadow:var(--shadow);color:var(--bone)}
+.section--dark .review{background:#8a1a16;border-color:#a13a34;color:var(--bone)}
+.stars{display:inline-flex;gap:3px;color:var(--gold);margin-bottom:.6rem}
+.section--dark .stars{color:#ffcf99}
+.stars svg{width:18px;height:18px}
+.review p{font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.4;margin:0 0 .9rem;color:var(--bone)}
+.review .who{font-weight:700;font-size:.9rem;font-style:normal;font-family:var(--sans);color:var(--gold)}
+.section--dark .review .who{color:#ffcf99}
+
+/* visit */
+.visit-grid{display:grid;gap:2rem;margin-top:2.4rem}
+@media(min-width:860px){.visit-grid{grid-template-columns:1fr 1.15fr}}
+.info-list{list-style:none;padding:0;margin:0;display:grid;gap:1.3rem}
+.info-list li{display:flex;gap:.9rem;align-items:flex-start}
+.info-list .ico{width:26px;height:26px;flex:0 0 auto;color:var(--red-lite)}
+.info-list h3{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.2rem;color:var(--muted)}
+.info-list p,.info-list a{margin:0;font-size:1.05rem;color:var(--bone);text-decoration:none;font-weight:500}
+.info-list a:hover{color:var(--red-lite)}
+.hours-row{display:flex;justify-content:space-between;gap:1rem;max-width:320px;padding:.15rem 0;border-bottom:1px dashed var(--line)}
+.hours-row span:last-child{font-weight:600}
+.map-facade{position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;background:repeating-linear-gradient(45deg,#241812 0 11px,#302015 11px 22px)}
+.map-facade .cta{position:absolute;inset:0;display:grid;place-content:center;gap:.7rem;justify-items:center;text-align:center;color:var(--bone)}
+.map-facade .cta svg{width:40px;height:40px;color:var(--red-lite)}
+.map-facade iframe{width:100%;height:100%;border:0;display:block}
+
+/* forms */
+.form{background:var(--white);border:1px solid var(--line-lt);border-radius:var(--r);padding:clamp(1.3rem,4vw,2.2rem);box-shadow:var(--shadow);margin-top:2.2rem;max-width:640px;margin-inline:auto;color:var(--ink)}
+.frow{display:grid;gap:1rem}
+@media(min-width:560px){.frow.two{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.field label{font-weight:600;font-size:.85rem;letter-spacing:.02em;color:var(--ink)}
+.field input,.field textarea{font-family:var(--sans);font-size:1rem;padding:.8rem .9rem;border:1.5px solid var(--line-lt);border-radius:var(--r);background:#fbf8f2;color:var(--ink)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--red)}
+.field textarea{min-height:120px;resize:vertical}
+.form-note{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}
+.form .form-note{color:var(--ink-2)}
+.form-status{margin-top:1rem;padding:.9rem 1rem;border-radius:var(--r);font-size:.95rem;font-weight:600;display:none}
+.form-status.show{display:block}
+.form-status.ok{background:#e9f3ea;color:#1f6b34;border:1px solid #bcdcc2}
+.form-status.err{background:#fbe6e4;color:#9c1a15;border:1px solid #f0bdb8}
+.btn.is-loading{pointer-events:none;opacity:.75}
+
+/* footer */
+.footer{background:#0d0906;color:var(--bone)}
+.footer .wrap{padding-block:clamp(2.8rem,7vw,4.2rem)}
+.fgrid{display:grid;gap:2rem}
+@media(min-width:760px){.fgrid{grid-template-columns:1.3fr 1fr 1fr}}
+.footer h3{font-family:var(--sans);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem;color:var(--gold);margin-bottom:.9rem}
+.footer p,.footer a{color:#e9e2d5;text-decoration:none;font-size:.98rem}
+.footer a:hover{color:var(--red-lite);text-decoration:underline}
+.footer .flogo .wm{font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--gold)}
+.socials{display:flex;gap:.7rem;margin-top:1rem}
+.socials a{width:42px;height:42px;border:1px solid rgba(245,237,225,.28);border-radius:50%;display:grid;place-items:center;color:var(--bone)}
+.socials a:hover{background:var(--red);border-color:var(--red)}
+.socials svg{width:20px;height:20px}
+.fbar{border-top:1px solid rgba(245,237,225,.14);margin-top:2.4rem;padding-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;justify-content:space-between;font-size:.82rem;color:#c9bfb0}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .r-up{opacity:1;transform:none}
+  .ember,.halo,.hearth{display:none}
+}
+
+/* ===== EVENTS ===== */
+.ev-hero{background:var(--bg-2);text-align:center;padding:clamp(2.6rem,7vw,4rem) 0 2rem;border-bottom:1px solid var(--line)}
+.ev-hero h1{font-family:var(--serif);color:var(--bone);font-size:clamp(2rem,6vw,3.2rem)}
+.ev-hero p{color:var(--muted);max-width:56ch;margin:.6rem auto 0}
+.events-wrap{padding:clamp(2.4rem,6vw,3.6rem) 0}
+.events-grid{display:grid;grid-template-columns:1fr;gap:1.3rem;max-width:1040px;margin:0 auto}
+@media(min-width:620px){.events-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.events-grid{grid-template-columns:repeat(3,1fr)}}
+.event-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.event-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--bg-3)}
+.event-card .ev-body{padding:1rem 1.1rem 1.2rem}
+.ev-date{font-family:var(--sans);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--gold);margin-bottom:.3rem}
+.event-card h3{font-family:var(--serif);color:var(--bone);font-size:1.25rem}
+.events-none{display:none;text-align:center;color:var(--muted);max-width:52ch;margin:2rem auto 0}
+.ev-book{background:var(--red-deep)}
+.ev-book .sec-title,.ev-book .sec-sub,.ev-book .kicker{color:var(--bone)}
+.ev-book .sec-sub{color:#f4ddcc}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap hbar">
+    <!-- LOGO placeholder: replace with real woodcut logo image -->
+    <a class="logo" href="/" aria-label="El Comal, Authentic Mexican Restaurant, home">
+      <img class="logo-img" src="/assets/images/elcomal-logo.webp" alt="El Comal, Authentic Mexican Restaurant" width="132" height="58">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/menu/">Menu</a>
+      <a href="/events/" aria-current="page">Events</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="/vip/">VIP Club</a>
+    </nav>
+    <a class="btn btn--primary btn--sm header-cta" href="https://online.skytab.com/s/elcomaljuliet" target="_blank" rel="noopener">Order Online</a>
+    <button class="hamb" id="hamb" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/menu/">Menu</a>
+    <a href="/events/" aria-current="page">Events</a>
+    <a href="/#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="/vip/">VIP Club</a>
+    <a class="btn btn--primary" href="https://online.skytab.com/s/elcomaljuliet" target="_blank" rel="noopener">Order Online</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="ev-hero">
+    <div class="wrap"><h1>Events at El Comal</h1><p>Celebrate every occasion with us. Here is what is coming up on the calendar.</p></div>
+  </section>
+  <section class="events-wrap">
+    <div class="wrap">
+      <div class="events-grid" id="events-grid">
+        <article class="event-card" data-event-date="2026-07-04"><img src="/assets/images/9f8620280ae8630c-400.webp" alt="Independence Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">July 4</div><h3>Independence Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-07-24"><img src="/assets/images/4d1af6d0cac895ae-800.webp" alt="National Tequila Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">July 24</div><h3>National Tequila Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-08-18"><img src="/assets/images/7bc1f04e87fe4a8d-800.webp" alt="National Fajitas Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">August 18</div><h3>National Fajitas Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-09-07"><img src="/assets/images/651a0263efd5c9c5-1600.webp" alt="Labor Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">September 7</div><h3>Labor Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-09-08"><img src="/assets/images/69d6ea2a3b46dd95-400.webp" alt="Grandparents Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">September 8</div><h3>Grandparents Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-09-16"><img src="/assets/images/e69d04b0f5ca3a83-1600.webp" alt="Mexican Independence Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">September 16</div><h3>Mexican Independence Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-09-25"><img src="/assets/images/81f346f9eea23382-800.webp" alt="National Quesadilla Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">September 25</div><h3>National Quesadilla Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-09-26"><img src="/assets/images/8d66ead7feecd36e-800.webp" alt="National Chimichanga Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">September 26</div><h3>National Chimichanga Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-10-01"><img src="/assets/images/9cc40a2ab7924887-400.webp" alt="National Vegetarian Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">October 1</div><h3>National Vegetarian Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-10-04"><img src="/assets/images/8698b9ebe1921fef-1600.webp" alt="National Taco Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">October 4</div><h3>National Taco Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-10-14"><img src="/assets/images/cc9b5362d486576a-800.webp" alt="Columbus Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">October 14</div><h3>Columbus Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-10-31"><img src="/assets/images/da3dd9a7ef1c0991-1600.webp" alt="Halloween at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">October 31</div><h3>Halloween</h3></div></article>
+        <article class="event-card" data-event-date="2026-11-26"><img src="/assets/images/7ea2d22c400211ed-800.webp" alt="Thanksgiving Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">November 26</div><h3>Thanksgiving Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-12-24"><img src="/assets/images/5be3918bb359bcea-299.webp" alt="Christmas Eve at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">December 24</div><h3>Christmas Eve</h3></div></article>
+        <article class="event-card" data-event-date="2026-12-25"><img src="/assets/images/daf80533a53e0e2c-259.webp" alt="Christmas Day at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">December 25</div><h3>Christmas Day</h3></div></article>
+        <article class="event-card" data-event-date="2026-12-31"><img src="/assets/images/9632049cf05cc9c2-400.webp" alt="New Year's Eve at El Comal" width="400" height="225" loading="lazy" decoding="async"><div class="ev-body"><div class="ev-date">December 31</div><h3>New Year's Eve</h3></div></article>
+      </div>
+      <p class="events-none" id="events-none">More events are on the way. Check back soon, or reach out below to plan your own.</p>
+    </div>
+  </section>
+      <section class="section ev-book" aria-labelledby="book-h">
+        <div class="wrap">
+          <p class="kicker" style="color:#ffd0ab"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" style="color:#ffd0ab"><path d="M4 11h16v9H4zM2 7h20v4H2zM12 7V4M9 4h6"/></svg>Private events</p>
+          <h2 class="sec-title" id="book-h">Host your celebration with us</h2>
+          <p class="sec-sub">Birthdays, quinceaneras, business dinners or a big group of friends. Tell us what you are planning and we will help you make it happen.</p>
+          <form class="form" id="party-form" novalidate>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <div class="frow two">
+              <div class="field"><label for="pf-name">Full name</label><input id="pf-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="pf-phone">Phone</label><input id="pf-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            </div>
+            <div class="frow two">
+              <div class="field"><label for="pf-email">Email</label><input id="pf-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="pf-people">Number of guests</label><input id="pf-people" name="people" type="number" min="1" inputmode="numeric"></div>
+            </div>
+            <div class="field"><label for="pf-msg">Tell us about your event</label><textarea id="pf-msg" name="message" required></textarea></div>
+            <button class="btn btn--primary" type="submit" id="pf-btn">Send request</button>
+            <p class="form-status" id="pf-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="flogo">
+        <img src="/assets/images/elcomal-logo.webp" alt="El Comal, Authentic Mexican Restaurant" width="132" height="58" style="height:52px;width:auto">
+        <p style="margin-top:.6rem;max-width:34ch">Authentic Mexican. Great food, made from scratch in Mt. Juliet, Tennessee.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/ElComalMtJuliet/" target="_blank" rel="noopener" aria-label="El Comal on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+          <a href="https://www.instagram.com/elcomalmtjuliet/" target="_blank" rel="noopener" aria-label="El Comal on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>Mon to Thu: 11:00a to 10:00p<br>Fri to Sat: 11:00a to 10:30p<br>Sunday: 11:00a to 10:00p</p>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=11177+Lebanon+Rd+Mt+Juliet+TN+37122" target="_blank" rel="noopener">11177 Lebanon Rd<br>Mt. Juliet, TN 37122</a></p>
+        <p style="margin-top:.8rem"><a href="tel:+16157584430">(615) 758-4430</a></p>
+        <p style="margin-top:.8rem"><a href="/vip/">Join the VIP Club</a></p>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>&copy; 2026 El Comal Authentic Mexican Restaurant</span>
+      <span>Powered by Chowdown</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<script>
+(function(){
+  var hamb=document.getElementById("hamb"),mnav=document.getElementById("mnav");
+  if(hamb&&mnav){
+    hamb.addEventListener("click",function(){var o=mnav.classList.toggle("open");hamb.setAttribute("aria-expanded",o?"true":"false");hamb.setAttribute("aria-label",o?"Close menu":"Open menu");});
+    mnav.addEventListener("click",function(e){if(e.target.tagName==="A"){mnav.classList.remove("open");hamb.setAttribute("aria-expanded","false");}});
+  }
+  // hide past events; if none upcoming, show all
+  var grid=document.getElementById("events-grid");
+  if(grid){
+    var cards=[].slice.call(grid.querySelectorAll(".event-card"));
+    var today=new Date(); today.setHours(0,0,0,0);
+    var shown=0;
+    cards.forEach(function(c){
+      var d=new Date(c.getAttribute("data-event-date")+"T00:00:00");
+      if(d<today){c.style.display="none";}else{shown++;}
+    });
+    if(shown===0){cards.forEach(function(c){c.style.display="";});}
+  }
+  // private-events form -> GHL (type=parties, client 67)
+  var form=document.getElementById("party-form"),status=document.getElementById("pf-status"),btn=document.getElementById("pf-btn");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    status.className="form-status";
+    var hp=form.querySelector('[name="_gotcha"]'); if(hp&&hp.value){return;}
+    if(!form.checkValidity()){status.className="form-status show err";status.textContent="Please add your name, phone, email and a few details.";form.reportValidity();return;}
+    btn.classList.add("is-loading");btn.textContent="Sending...";
+    var fd=new FormData();
+    fd.append("type","parties"); fd.append("client","67");
+    fd.append("ce-name",document.getElementById("pf-name").value.trim());
+    fd.append("ce-phone",document.getElementById("pf-phone").value.trim());
+    fd.append("ce-email",document.getElementById("pf-email").value.trim());
+    fd.append("ce-people",document.getElementById("pf-people").value.trim());
+    fd.append("description",document.getElementById("pf-msg").value.trim());
+    fd.append("_gotcha","");
+    fetch("https://chowdownos.onrender.com/api/public/forms/submit",{method:"POST",body:fd})
+      .then(function(r){return r.json().catch(function(){throw 0;});})
+      .then(function(res){
+        btn.classList.remove("is-loading");btn.textContent="Send request";
+        if(!res||res.ok===false)throw 0;
+        status.className="form-status show ok";status.textContent="Gracias! Your event request is in. We will reach out shortly to plan the details.";
+        form.reset();
+      })
+      .catch(function(){
+        btn.classList.remove("is-loading");btn.textContent="Send request";
+        status.className="form-status show err";status.textContent="Something went wrong. Please try again or call us at (615) 758-4430.";
+      });
+  });
+})();
+</script>
+</body>
+</html>
