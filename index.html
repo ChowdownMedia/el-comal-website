@@ -115,6 +115,9 @@ a{color:var(--red-lite);text-underline-offset:3px;text-decoration-thickness:1px}
 .hero .lede{max-width:44ch;margin:0 auto 1.9rem;font-size:1.08rem;color:var(--muted)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
 .hero-dish{position:relative;z-index:3;max-width:340px;margin:2.4rem auto 0}
+.hero-bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
+.hero-bg-scrim{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(125% 95% at 50% 118%, rgba(74,33,16,.58) 0%, rgba(41,22,13,.76) 34%, rgba(13,9,6,.9) 100%)}
 
 /* sparks (real ember flecks, not dots) */
 .embers{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
@@ -331,6 +334,8 @@ a{color:var(--red-lite);text-underline-offset:3px;text-decoration-thickness:1px}
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" aria-labelledby="brand">
+    <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/assets/media/el-comal-poster.jpg" aria-hidden="true"><source src="/assets/media/el-comal-hd.mp4" type="video/mp4"></video>
+    <div class="hero-bg-scrim" aria-hidden="true"></div>
     <div class="hearth" aria-hidden="true"></div>
     <div class="halo" aria-hidden="true"></div>
     <div class="halo two" aria-hidden="true"></div>
@@ -349,9 +354,6 @@ a{color:var(--red-lite);text-underline-offset:3px;text-decoration-thickness:1px}
           Order Online
         </a>
         <a class="btn btn--ghost" href="/vip/">Join the VIP Club</a>
-      </div>
-      <div class="hero-dish fade-seq d4">
-        <img class="float" src="/assets/images/hero-filete.webp" alt="Filete Tampiqueño at El Comal, grilled steak with rice and beans" width="900" height="563" loading="eager" decoding="async" style="aspect-ratio:16/10;border-radius:var(--r);border:1px solid var(--line);width:100%;object-fit:cover">
       </div>
     </div>
   </section>
